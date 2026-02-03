@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的Minecraft服务器 | 欢迎加入</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2ecc71',
+                        secondary: '#f8f9fa',
+                        accent: '#3498db',
+                        dark: '#2c3e50',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <!-- 顶部导航 -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa fa-cube text-2xl text-primary"></i>
+                <h1 class="text-xl font-bold text-dark">我的Minecraft服务器</h1>
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#overview" class="text-gray-600 hover:text-accent transition-colors">服务器介绍</a></li>
+                    <li><a href="#connect" class="text-gray-600 hover:text-accent transition-colors">如何加入</a></li>
+                    <li><a href="#features" class="text-gray-600 hover:text-accent transition-colors">特色玩法</a></li>
+                    <li><a href="#rules" class="text-gray-600 hover:text-accent transition-colors">服务器规则</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 主内容区 -->
+    <main class="container mx-auto px-4 py-8 max-w-4xl">
+        <!-- 概览部分 -->
+        <section id="overview" class="mb-12">
+            <div class="bg-white rounded-xl shadow-md p-6 transform hover:shadow-lg transition-shadow">
+                <h2 class="text-2xl font-bold mb-4 text-dark flex items-center">
+                    <i class="fa fa-info-circle text-accent mr-2"></i> 服务器介绍
+                </h2>
+                <p class="text-gray-600 leading-relaxed">
+                    欢迎来到我们的Minecraft生存服务器！这是一个主打友好氛围、长期稳定的纯净生存服，支持多人联机，我们鼓励玩家合作建造、探索世界，共同打造一个温馨的游戏社区。
+                </p>
+                <div class="mt-4 p-4 bg-secondary rounded-lg border border-gray-200">
+                    <h3 class="font-semibold mb-2">基本信息</h3>
+                    <ul class="list-disc list-inside space-y-1 text-gray-600">
+                        <li>📌 服务器版本：1.20.4</li>
+                        <li>🌍 服务器类型：纯净生存 + 轻度插件</li>
+                        <li>🔌 在线状态：7×24小时稳定运行</li>
+                        <li>👥 最大人数：50人</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 连接方式 -->
+        <section id="connect" class="mb-12">
+            <div class="bg-white rounded-xl shadow-md p-6 transform hover:shadow-lg transition-shadow">
+                <h2 class="text-2xl font-bold mb-4 text-dark flex items-center">
+                    <i class="fa fa-server text-accent mr-2"></i> 如何加入
+                </h2>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">1. 服务器地址</h3>
+                        <div class="p-4 bg-secondary rounded-lg border border-gray-200 flex items-center justify-between">
+                            <span class="font-mono text-primary">mc.yourserver.com</span>
+                            <button class="text-sm bg-accent text-white px-3 py-1 rounded hover:bg-accent/90 transition-colors" onclick="copyToClipboard('mc.yourserver.com')">
+                                <i class="fa fa-copy mr-1"></i> 复制
+                            </button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">2. 加入步骤</h3>
+                        <ol class="list-decimal list-inside space-y-2 text-gray-600">
+                            <li>打开Minecraft启动器，选择 <span class="font-medium">1.20.4</span> 版本启动游戏</li>
+                            <li>进入多人游戏，点击 <span class="font-medium">添加服务器</span></li>
+                            <li>粘贴服务器地址并保存，点击 <span class="font-medium">加入服务器</span></li>
+                            <li>首次进入请阅读欢迎信息并完成验证</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 特色玩法 -->
+        <section id="features" class="mb-12">
+            <div class="bg-white rounded-xl shadow-md p-6 transform hover:shadow-lg transition-shadow">
+                <h2 class="text-2xl font-bold mb-4 text-dark flex items-center">
+                    <i class="fa fa-star text-accent mr-2"></i> 特色玩法
+                </h2>
+                
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="p-4 bg-secondary rounded-lg border border-gray-200 hover:border-accent transition-colors">
+                        <h3 class="font-semibold mb-2 flex items-center">
+                            <i class="fa fa-home text-primary mr-2"></i> 领地保护
+                        </h3>
+                        <p class="text-gray-600 text-sm">使用插件可圈定个人领地，防止建筑被破坏或物品被窃取，打造安全的私人空间。</p>
+                    </div>
+                    <div class="p-4 bg-secondary rounded-lg border border-gray-200 hover:border-accent transition-colors">
+                        <h3 class="font-semibold mb-2 flex items-center">
+                            <i class="fa fa-gift text-primary mr-2"></i> 每日福利
+                        </h3>
+                        <p class="text-gray-600 text-sm">每日登录可领取游戏币与道具，参与社区活动还能获得稀有奖励。</p>
+                    </div>
+                    <div class="p-4 bg-secondary rounded-lg border border-gray-200 hover:border-accent transition-colors">
+                        <h3 class="font-semibold mb-2 flex items-center">
+                            <i class="fa fa-users text-primary mr-2"></i> 社区活动
+                        </h3>
+                        <p class="text-gray-600 text-sm">定期举办建筑比赛、生存挑战等活动，获胜者可获得专属称号与物资。</p>
+                    </div>
+                    <div class="p-4 bg-secondary rounded-lg border border-gray-200 hover:border-accent transition-colors">
+                        <h3 class="font-semibold mb-2 flex items-center">
+                            <i class="fa fa-map text-primary mr-2"></i> 公共地标
+                        </h3>
+                        <p class="text-gray-600 text-sm">服务器内设有公共传送点、交易所和新手引导区，帮助新玩家快速融入。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 服务器规则 -->
+        <section id="rules">
+            <div class="bg-white rounded-xl shadow-md p-6 transform hover:shadow-lg transition-shadow">
+                <h2 class="text-2xl font-bold mb-4 text-dark flex items-center">
+                    <i class="fa fa-book text-accent mr-2"></i> 服务器规则
+                </h2>
+                
+                <div class="space-y-3 text-gray-600">
+                    <div class="flex items-start">
+                        <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                        <p>禁止使用作弊、外挂或利用BUG获取不正当利益</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                        <p>禁止破坏他人建筑、盗取物品或恶意PVP</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                        <p>禁止发布违规内容、恶意刷屏或辱骂他人</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                        <p>请积极参与社区建设，友好互助，共同维护良好环境</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm text-gray-400">
+                如有问题请联系管理员：<span class="text-accent">Admin#1234</span> | 服务器QQ群：<span class="text-accent">123456789</span>
+            </p>
+            <div class="mt-4 flex justify-center space-x-4">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fa fa-qq mr-1"></i> 官方QQ群
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fa fa-bilibili mr-1"></i> Bilibili主页
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                const button = event.target;
+                const originalText = button.innerHTML;
+                button.innerHTML = '<i class="fa fa-check mr-1"></i> 已复制';
+                button.classList.remove('bg-accent');
+                button.classList.add('bg-green-500');
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.classList.remove('bg-green-500');
+                    button.classList.add('bg-accent');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
